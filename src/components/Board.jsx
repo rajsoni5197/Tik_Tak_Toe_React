@@ -29,7 +29,7 @@ function Board(){
         changeTurn();
     },[boardState])
     function handleClick(id){
-        if(winner) return;
+        if(winner||  boardState[id]) return;
         
         const newState = [...boardState];
         newState[id] = turn;
