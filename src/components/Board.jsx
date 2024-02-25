@@ -5,6 +5,7 @@ import { BoardStateContext } from '../../store/BoardState';
 import { currentTurnContext } from '../../store/TurnState';
 import { currentWinState } from '../../store/WinState';
 import WinLine from './WinLine';
+import clickSound from "/box_click_Sound.wav";
 
 function Board(){
 
@@ -16,6 +17,12 @@ function Board(){
     
     useEffect(()=>{
         
+        try{
+            new Audio(clickSound).play();
+        }
+        catch(error){
+            console.log(error);
+        }
         const check  =isWinner(turn)  || isDraw() ;
         console.log('isWin', check,"board ",boardState );
         setWinner(check);
