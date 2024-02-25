@@ -1,0 +1,17 @@
+.result-card{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto ;
+    animation: fadeInOut 1s ease-out forwards;
+    
+}
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

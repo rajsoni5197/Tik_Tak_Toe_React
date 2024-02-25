@@ -1,0 +1,52 @@
+.WinLine{
+    
+    width: 270px; /* Adjust width as needed */
+    height: 4px; /* Adjust height as needed */
+    background-color: rgb(249, 154, 81);
+  
+    position: absolute;
+    transition: all 1s ease;
+  
+
+}
+.top{
+    transform: translateY(-50%);
+    top: 16%;
+}
+.down{
+    transform: translateY(50%);
+    top: 83%;
+}
+.centerVerticle{
+    transform: translateY(-50%);
+    top: 50%;
+    
+}
+.left{
+   width: 4px;
+    height: 270px;
+    transform: translateX(-50%);
+    left:16%
+}
+.right{
+ width: 4px;
+    height: 270px;
+    transform: translateX(-50%);
+    left:84%
+}
+.centerHorizontal{
+    width: 4px;
+    height: 270px;
+    transform: translateX(-50%) ;
+    left: 50%;
+}
+.diagonalLeft{
+    width: 382px;
+    transform: translateY(-50%) rotate(45deg);
+    top: 50%;
+}
+.diagonalRight{
+    width: 382px;
+    transform: translateY(-50%) rotate(-45deg);
+    top: 50%;
+}
