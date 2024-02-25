@@ -3,6 +3,7 @@ import "./PlayAgain.css"
 import { BoardStateContext } from "../../store/BoardState";
 import { currentTurnContext } from "../../store/TurnState";
 import { currentWinState } from "../../store/WinState";
+import restartSound from "/Restart_sound.wav"
 
 function PlayAgain() {
     const {boardState , setBoardState}  = useContext(BoardStateContext);
@@ -10,6 +11,12 @@ function PlayAgain() {
     const {winner,setWinCombination, isWinner, setWinner,isDraw } = useContext(currentWinState);
 
     function handleClick(){
+        try{
+            new Audio(restartSound).play();
+        }
+        catch(error){
+            console.log(error);
+        }
         setBoardState(Array(9).fill(null));
         setWinner(null);
         setWinCombination(null);
